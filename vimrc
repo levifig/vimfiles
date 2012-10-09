@@ -88,7 +88,7 @@ set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
 try
   source ~/.vim/snippets/support_functions.vim
 catch
-  source ~/vimfiles/snippets/support_functions.vim
+  source ~/.dotfiles/vim/snippets/support_functions.vim
 endtry
 autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()
