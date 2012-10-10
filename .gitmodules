@@ -22,3 +22,18 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/skwp/vim-powerline.git
+[submodule "bundle/vim-ack"]
+	path = bundle/vim-ack
+	url = https://github.com/mileszs/ack.vim
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/vim-rainbow-parenthesis"]
+	path = bundle/vim-rainbow-parenthesis
+	url = https://github.com/vim-scripts/Rainbow-Parenthesis.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
