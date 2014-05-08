@@ -52,3 +52,9 @@
 [submodule "bundle/vim-sessionman"]
 	path = bundle/vim-sessionman
 	url = git://github.com/vim-scripts/sessionman.vim.git
+[submodule "bundle/vim-nerdtree"]
+	path = bundle/vim-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git

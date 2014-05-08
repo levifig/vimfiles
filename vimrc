@@ -57,8 +57,6 @@ set guioptions=Amg
 
 set wildignore+=.git,vendor/**,install/**,*DS_Store*,*sass-cache*,log/**,tmp/**
 
-let mapleader='<c>'
-let g:mapleader='<c>'
 let g:user_zen_expandabbr_key = '<c-Space>'
 let g:use_zen_complete_tag = 1
 
@@ -74,9 +72,6 @@ set nofoldenable        "dont fold by default
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-"Fast editing of the vimrc/gvimrc
-map <leader>e :e! ~/.vimrc<cr>
-map <leader>E :e! ~/.gvimrc<cr>
 
 "When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
@@ -84,8 +79,13 @@ autocmd! bufwritepost vimrc source ~/.vimrc
 "Netwr
 let g:netrw_liststyle = 3
 
-"Ack
-nnoremap <leader>a :Ack
+"Key Mappings
+nnoremap <leader>a :Ack<CR>
+nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>d :NERDTreeToggle<CR> 
+
+map <leader>e :e! ~/.vimrc<cr>
+map <leader>E :e! ~/.gvimrc<cr>
 
 "Navigate between splits
 nnoremap <C-h> <C-w>h
@@ -109,7 +109,7 @@ set ls=2 " Always show status line
 "Yankring
 let g:yankring_history_file = '.vim_runtime/yankring_history'
 
-"CtrlP
+"CtrlP Options
 let g:ctrlp_jump_to_buffer = 0
 let g:ctrlp_map = '<leader>,'
 let g:ctrlp_working_path_mode = 0
