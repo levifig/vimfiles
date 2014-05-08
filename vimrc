@@ -51,8 +51,9 @@ silent !mkdir -p ~/\.vim_runtime/undos > /dev/null 2>&1
 set undodir=~/.vim_runtime/undos
 set undofile
 
-colorscheme molokai
-let g:molokai_original = 1
+colorscheme Tomorrow-Night-Eighties
+"colorscheme monokai
+"let g:molokai_original = 1
 set guioptions=Amg
 
 set wildignore+=.git,vendor/**,install/**,*DS_Store*,*sass-cache*,log/**,tmp/**
