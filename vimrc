@@ -106,6 +106,7 @@ nnoremap <leader>v V`]
 "Powerline
 let g:Powerline_symbols='fancy'
 set ls=2 " Always show status line
+let g:airline_powerline_fonts = 1
 
 "Yankring
 let g:yankring_history_file = '.vim_runtime/yankring_history'

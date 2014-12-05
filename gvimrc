@@ -1,4 +1,4 @@
-set guifont=Menlo\ Regular:h14
+set guifont=Liberation\ Mono\ Powerline:h18
 set antialias
 set lines=60 columns=170
 
