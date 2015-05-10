@@ -83,7 +83,7 @@ let g:netrw_liststyle = 3
 "Key Mappings
 nnoremap <leader>a :Ack<CR>
 nnoremap <leader>t :CtrlP<CR>
-nnoremap <leader>d :NERDTreeToggle<CR> 
+nnoremap <leader>d :NERDTreeToggle<CR>
 
 map <leader>e :e! ~/.vimrc<cr>
 map <leader>E :e! ~/.gvimrc<cr>
@@ -106,7 +106,7 @@ nnoremap <leader>v V`]
 "Powerline
 let g:Powerline_symbols='fancy'
 set ls=2 " Always show status line
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 "Yankring
 let g:yankring_history_file = '.vim_runtime/yankring_history'

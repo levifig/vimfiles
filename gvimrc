@@ -1,4 +1,4 @@
-set guifont=Liberation\ Mono\ Powerline:h18
+set guifont=Monaco\ for\ Powerline:h15
 set antialias
 set lines=60 columns=170
 
