@@ -1,17 +1,18 @@
-set guifont=Monaco\ for\ Powerline:h15
+set guifont=Monaco\ for\ Powerline:h14
 set antialias
 set lines=60 columns=170
+set transparency=1
+set bg=dark
+set go-=T   "Start without the toolbar
+set go+=c   "Do not use modal alert dialogs! (Prefer Vim style prompt.)
 
 " Don't beep
 set visualbell
 
-" Start without the toolbar
-set guioptions-=T
+" Fullscreen takes up entire screen
+"set fuoptions=maxhorz,maxvert
 
 if has("gui_macvim")
-" Fullscreen takes up entire screen
-  set fuoptions=maxhorz,maxvert
-
   " Let's unset CMD-t, CMD-T, CMD-S and CMD-W
   macm File.New\ Tab key=<nop>
   macm File.Open\ Tab\.\.\. key=<nop>
@@ -28,3 +29,6 @@ if has("gui_macvim")
   vmap <D-j> <M-j>
   vmap <D-k> <M-k>
 end
+
+autocmd BufWritePost .vimrc source % source ~/.gvimrc
+autocmd BufWritePost .gvimrc source %

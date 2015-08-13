@@ -51,10 +51,18 @@ silent !mkdir -p ~/\.vim_runtime/undos > /dev/null 2>&1
 set undodir=~/.vim_runtime/undos
 set undofile
 
-colorscheme Tomorrow-Night-Eighties
-"colorscheme monokai
-"let g:molokai_original = 1
-set guioptions=Amg
+" Configure UI {
+  "set term=screen-256color
+  let base16colorspace=256        " Access colors present in 256 colorspace
+  set t_Co=256
+  set background=dark
+  colorscheme Tomorrow-Night-Eighties 
+  "colorscheme base16-ocean
+  "colorscheme molokai
+  "let g:molokai_original = 1
+  set guioptions=Amg
+  set nofoldenable                " disable code folding
+" }
 
 set wildignore+=.git,vendor/**,install/**,*DS_Store*,*sass-cache*,log/**,tmp/**
 
@@ -73,9 +81,8 @@ set nofoldenable        "dont fold by default
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-
 "When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vimrc
+autocmd BufWritePost .vimrc source %
 
 "Netwr
 let g:netrw_liststyle = 3
@@ -106,7 +113,6 @@ nnoremap <leader>v V`]
 "Powerline
 let g:Powerline_symbols='fancy'
 set ls=2 " Always show status line
-"let g:airline_powerline_fonts = 1
 
 "Yankring
 let g:yankring_history_file = '.vim_runtime/yankring_history'
@@ -126,9 +132,8 @@ let g:ctrlp_match_window_reversed = 0
 let g:sparkupExecuteMapping='<C-e>'
 
 "Save on lost focus
-"au FocusLost * :wa
-"
-"
+au FocusLost * :wa
+
 "snipmate setup
 "try
 "  source ~/.vim/snippets/support_functions.vim
