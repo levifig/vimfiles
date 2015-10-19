@@ -1,9 +1,46 @@
 set nocompatible                " choose no compatibility with legacy vi
+filetype off
 set modelines=0
 
-let g:pathogen_disabled = []
-call pathogen#infect()
-call pathogen#helptags()
+" let g:pathogen_disabled = []
+" call pathogen#infect()
+" call pathogen#helptags()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+  "Core
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'bling/vim-airline'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'Xuyuanp/nerdtree-git-plugin'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'mileszs/ack.vim'
+  Plugin 'vim-scripts/YankRing.vim'
+  Plugin 'jlanzarotta/bufexplorer'
+
+  "Language-specific
+  Plugin 'tpope/vim-rails'
+  Plugin 'tpope/vim-haml'
+  Plugin 'othree/html5.vim'
+  Plugin 'fatih/vim-go'
+  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'tpope/vim-cucumber'
+
+  "Additional
+  Plugin 'vim-scripts/Rainbow-Parenthesis'
+  Plugin 'ervandew/supertab'
+  Plugin 'scrooloose/snippets'
+  Plugin 'tpope/vim-endwise'
+  Plugin 'vim-scripts/sessionman.vim'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'tpope/vim-surround'
+
+  " Testing
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'mattn/emmet-vim'
+  " Plugin 'easymotion/vim-easymotion'
+call vundle#end()  
 
 syntax enable
 set encoding=utf-8
@@ -110,9 +147,10 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 "Select text just pasted for further formatting
 nnoremap <leader>v V`]
 
-"Powerline
+"Airline/Powerline
+let g:airline_powerline_fonts = 1
 let g:Powerline_symbols='fancy'
-set ls=2 " Always show status line
+set laststatus=2 " Always show status line
 
 "Yankring
 let g:yankring_history_file = '.vim_runtime/yankring_history'
@@ -133,26 +171,6 @@ let g:sparkupExecuteMapping='<C-e>'
 
 "Save on lost focus
 au FocusLost * :wa
-
-"snipmate setup
-"try
-"  source ~/.vim/snippets/support_functions.vim
-"catch
-"  source ~/.dotfiles/vim/snippets/support_functions.vim
-"endtry
-"autocmd vimenter * call s:SetupSnippets()
-"function! s:SetupSnippets()
-
-    "if we're in a rails env then read in the rails snippets
-"    if filereadable("./config/environment.rb")
-"        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-"        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-"    endif
-"
-"    call ExtractSnips("~/.vim/snippets/html", "eruby")
-"    call ExtractSnips("~/.vim/snippets/html", "xhtml")
-"    call ExtractSnips("~/.vim/snippets/html", "php")
-"endfunction
 
 "visual search mappings
 function! s:VSetSearch()

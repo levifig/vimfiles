@@ -1,6 +1,6 @@
 set guifont=Monaco\ for\ Powerline:h14
 set antialias
-set lines=60 columns=170
+set lines=50 columns=200
 set transparency=1
 set bg=dark
 set go-=T   "Start without the toolbar
