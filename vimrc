@@ -5,7 +5,7 @@ set modelines=0
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   "Core
-  Plugin 'kien/ctrlp.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/syntastic'
   Plugin 'scrooloose/nerdtree'
