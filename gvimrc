@@ -1,6 +1,6 @@
-set guifont=Monaco\ for\ Powerline:h14
+set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ Plus\ Font\ Awesome\ Plus\ Octicons\ Plus\ Pomicons:h14
 set antialias
-set lines=50 columns=200
+set lines=65 columns=200
 set transparency=1
 set bg=dark
 set go-=T   "Start without the toolbar

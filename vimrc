@@ -2,10 +2,6 @@ set nocompatible                " choose no compatibility with legacy vi
 filetype off
 set modelines=0
 
-" let g:pathogen_disabled = []
-" call pathogen#infect()
-" call pathogen#helptags()
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   "Core
@@ -35,6 +31,7 @@ call vundle#begin()
   Plugin 'vim-scripts/sessionman.vim'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'tpope/vim-surround'
+  Plugin 'ryanoasis/vim-devicons'
 
   " Testing
   Plugin 'airblade/vim-gitgutter'
@@ -60,7 +57,7 @@ set wildmode=list:longest
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
-set backspace=indent,eol,start  " backspace through everything in insert mode
+" set backspace=indent,eol,start  " backspace through everything in insert mode
 set pastetoggle=<F11>
 
 let mapleader=','
@@ -79,7 +76,7 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Turn backup off, since most stuff is in SVN, git anyway...
+" Turn backup off, since most stuff is in git anyway...
 set nobackup
 set nowb
 set noswapfile
@@ -88,7 +85,7 @@ silent !mkdir -p ~/\.vim_runtime/undos > /dev/null 2>&1
 set undodir=~/.vim_runtime/undos
 set undofile
 
-" Configure UI {
+" Configure UI
   "set term=screen-256color
   let base16colorspace=256        " Access colors present in 256 colorspace
   set t_Co=256
@@ -99,7 +96,6 @@ set undofile
   "let g:molokai_original = 1
   set guioptions=Amg
   set nofoldenable                " disable code folding
-" }
 
 set wildignore+=.git,vendor/**,install/**,*DS_Store*,*sass-cache*,log/**,tmp/**
 
