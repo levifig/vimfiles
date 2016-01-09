@@ -1,4 +1,5 @@
-set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ Plus\ Font\ Awesome\ Plus\ Octicons\ Plus\ Pomicons:h14
+" Patched Literation Mono for Powerline & Dev Icons https://git.io/vuXDg
+set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
 set antialias
 set lines=65 columns=200
 set transparency=1

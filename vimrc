@@ -86,16 +86,13 @@ set undodir=~/.vim_runtime/undos
 set undofile
 
 " Configure UI
-  "set term=screen-256color
-  let base16colorspace=256        " Access colors present in 256 colorspace
-  set t_Co=256
-  set background=dark
-  colorscheme Tomorrow-Night-Eighties 
-  "colorscheme base16-ocean
-  "colorscheme molokai
-  "let g:molokai_original = 1
-  set guioptions=Amg
-  set nofoldenable                " disable code folding
+set term=screen-256color
+let base16colorspace=256        " Access colors present in 256 colorspace
+set t_Co=256
+set background=dark
+colorscheme Tomorrow-Night-Eighties
+set guioptions=Amg
+set nofoldenable                " disable code folding
 
 set wildignore+=.git,vendor/**,install/**,*DS_Store*,*sass-cache*,log/**,tmp/**
 
