@@ -1,2 +1,4 @@
 My personal Vim configuration.
-This is not an original configuration but a collection of many. Enjoy.
+
+## Required
+Run `:PluginInstall` to have Vundle install all configured plugins.
