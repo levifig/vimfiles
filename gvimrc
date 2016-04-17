@@ -1,5 +1,6 @@
 " Patched Literation Mono for Powerline & Dev Icons https://git.io/vuXDg
-set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
+" set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete\ Mono:h14
+set guifont=Knack\ Regular\ Nerd\ Font\ Complete\ Mono:h15
 set antialias
 set lines=65 columns=200
 set transparency=1

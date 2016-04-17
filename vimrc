@@ -22,6 +22,7 @@ call vundle#begin()
   Plugin 'fatih/vim-go'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'tpope/vim-cucumber'
+  Plugin 'dagwieers/asciidoc-vim'
 
   "Additional
   Plugin 'vim-scripts/Rainbow-Parenthesis'
