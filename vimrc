@@ -19,10 +19,14 @@ call vundle#begin()
   Plugin 'tpope/vim-rails'
   Plugin 'tpope/vim-haml'
   Plugin 'othree/html5.vim'
-  Plugin 'fatih/vim-go'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'tpope/vim-cucumber'
   Plugin 'dagwieers/asciidoc-vim'
+  Plugin 'elixir-lang/vim-elixir'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
+  "Plugin 'slashmili/alchemist.vim'
+  "Plugin 'fatih/vim-go'
 
   "Additional
   Plugin 'vim-scripts/Rainbow-Parenthesis'
@@ -37,7 +41,12 @@ call vundle#begin()
   " Testing
   Plugin 'airblade/vim-gitgutter'
   Plugin 'mattn/emmet-vim'
+  Plugin 'sheerun/vim-polyglot'
   " Plugin 'easymotion/vim-easymotion'
+  
+  " Themes
+  Plugin 'joshdick/onedark.vim'
+  Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()  
 
 syntax enable
@@ -88,10 +97,14 @@ set undofile
 
 " Configure UI
 set term=screen-256color
-let base16colorspace=256        " Access colors present in 256 colorspace
+"let base16colorspace=256        " Access colors present in 256 colorspace
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Eighties
+
+"colorscheme Tomorrow-Night-Eighties
+let g:onedark_termcolors=256
+colorscheme onedark
+
 set guioptions=Amg
 set nofoldenable                " disable code folding
 
@@ -113,7 +126,7 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 "When vimrc is edited, reload it
-autocmd BufWritePost .vimrc source %
+"autocmd BufWritePost .vimrc source %
 
 "Netwr
 let g:netrw_liststyle = 3
@@ -143,6 +156,7 @@ nnoremap <leader>v V`]
 
 "Airline/Powerline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='onedark'
 let g:Powerline_symbols='fancy'
 set laststatus=2 " Always show status line
 
@@ -158,8 +172,8 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_extensions = ['tag']
 
 "I prefer CtrlP on top... #twss
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_match_window_reversed = 1
 
 let g:sparkupExecuteMapping='<C-e>'
 
