@@ -1,10 +1,7 @@
-" Patched Literation Mono for Powerline & Dev Icons https://git.io/vuXDg
-" set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete\ Mono:h14
-set guifont=Knack\ Regular\ Nerd\ Font\ Complete\ Mono:h15
+set macligatures
+set guifont=FiraCodeNerdFontCompleteM-Regular:h15
 set antialias
 set lines=65 columns=200
-set transparency=1
-set bg=dark
 set go-=T   "Start without the toolbar
 set go+=c   "Do not use modal alert dialogs! (Prefer Vim style prompt.)
 
@@ -31,6 +28,3 @@ if has("gui_macvim")
   vmap <D-j> <M-j>
   vmap <D-k> <M-k>
 end
-
-autocmd BufWritePost .vimrc source % source ~/.gvimrc
-autocmd BufWritePost .gvimrc source %
