@@ -46,13 +46,8 @@ call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'joshdick/onedark.vim'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'hzchirs/vim-material'
+  "Plug 'hzchirs/vim-material'
 call plug#end()  
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
 
 syntax enable
 set encoding=utf-8
@@ -104,21 +99,23 @@ silent !mkdir -p ~/\.vim_runtime/undos > /dev/null 2>&1
 set undodir=~/.vim_runtime/undos
 set undofile
 
-" Themes
-let g:material_style='palenight'
-set background=dark
-colorscheme vim-material
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-"let g:onedark_termcolors=256
-"let g:onedark_terminal_italics=1
-"set background=dark
-"colorscheme onedark
+" Themes
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+set background=dark
+set noshowmode
+colorscheme onedark
 
 "Airline/Powerline
 let g:airline_powerline_fonts = 1
-"let g:airline_theme='onedark'
-let g:airline_theme='material'
+let g:airline_theme='onedark'
 let g:Powerline_symbols='fancy'
+let g:airline#extensions#tabline#enabled = 1
+let g:bufferline_echo = 0
 set laststatus=2 " Always show status line
 
 set guioptions=Amg

@@ -1,5 +1,6 @@
-set macligatures
-set guifont=FiraCodeNerdFontCompleteM-Regular:h15
+"set macligatures
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+set guifont=JetBrainsMono\ Nerd\ Font\ 15
 set antialias
 set lines=65 columns=200
 set go-=T   "Start without the toolbar
